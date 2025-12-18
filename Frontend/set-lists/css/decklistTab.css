@@ -41,7 +41,7 @@
   transition: inset 0.5s ease-in-out;
 }
 
-.decklistTab .button .close{
+.decklistTab .button .close {
   background-color: red;
   color: white;
   border: none;
