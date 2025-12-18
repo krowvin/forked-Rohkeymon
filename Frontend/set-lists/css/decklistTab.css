@@ -1,3 +1,7 @@
+.rareCard {
+  background-color: gold;
+}
+
 .decklistButtonContainer {
   padding: 10px;
   display: flex;
@@ -53,9 +57,12 @@
 
 .decklistTabHeader {
   height: 5vh;
+  min-height: 50px;
   display: grid;
   grid-template-columns: 1fr 40px;
   border-color: red;
+  background: lightgray;
+  color: black;
 }
 .decklistTab h1 {
   text-align: center;
