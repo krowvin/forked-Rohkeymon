@@ -34,7 +34,7 @@ services:
       RDB_PW: rohkeymonpw
       Spring_Sec_Username: admin
       Spring_Sec_PW: adminpw
-      APP_CORS_ALLOWED_ORIGINS: ${APP_CORS_ALLOWED_ORIGINS:-https://rohkeymon.krowvin.com}
+      APP_CORS_ALLOWED_ORIGINS: ${APP_CORS_ALLOWED_ORIGINS:-http://localhost:3000,https://rohkeymon.krowvin.com}
     ports:
       - "8080:8080"
 
