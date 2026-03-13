@@ -2,7 +2,6 @@ server_tokens off;
 
 server {
     listen 8080;
-    listen [::]:8080;
     server_name ${APP_DOMAIN};
     absolute_redirect off;
     port_in_redirect off;
@@ -46,6 +45,7 @@ server {
             deny all;
         }
 
-        try_files $uri $uri/ /index.html;
+        try_files $uri $uri.html $uri/ =404;
+
     }
 }
