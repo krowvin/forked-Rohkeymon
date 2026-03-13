@@ -1,87 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rohkeymon - Welcome!</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="login-page.css" />
+    <link rel="stylesheet" href="/templates/header.css" />
+    <script src="/js/main.js" async defer></script>
+    <script src="/templates/header.js"></script>
+    <script src="index.js" defer></script>
+    <!-- Waits for page to load before running js-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rohkeymon - Welcome!</title>
-  <link rel="stylesheet" href="/general.css">
-  <link rel="stylesheet" href="login-page.css">
-  <link rel="stylesheet" href="/templates/header.css">
-  <script src="/js/main.js" async defer></script>
-  <script src="/templates/header.js"></script>
-  <script src="index.js" defer></script>
-  <!-- Waits for page to load before running js-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <header id="header" class="header">
-
-  </header>
-  <div class="wrapper">
-    <div class="form-box login">
-      <form action="">
-        <h2>Login</h2>
-        <div class="input-box">
-          <span class="icon"></span>
-          <ion-icon name="person-outline"></ion-icon>
-          <input type="email" required>
-          <label>Email</label>
+  <body>
+    <header id="header" class="header"></header>
+    <div class="welcome-box">
+      <h1>Welcome to Rohkeymon!</h1>
+      <p>
+        Your one-stop shop for all things Pokemon TCG. Explore our the card
+        database, build your dream deck, and connect with fellow trainers in our
+        vibrant community. Whether you're a seasoned player or just starting
+        your journey, Rohkeymon has everything you need to become a Pokemon
+        Master!
+      </p>
+      <a href="/set-lists">
+        <div
+          class="button"
+          style="margin: 20px auto; display: block; text-align: center"
+        >
+          Explore Sets
         </div>
-        <div class="input-box">
-          <span class="icon"></span>
-          <ion-icon name="lock-closed-outline"></ion-icon>
-          <input type="password" required>
-          <label>Password</label>
-        </div>
-        <button type="submit" class="button">Login</button>
-        <div class="remember-forgot">
-          <p><a href="#">Forgot Password?</a></p>
-        </div>
-        <div class="login-register">
-          <p><a href="#" class="register-link">Register New Account</a></p>
-        </div>
-      </form>
+      </a>
     </div>
-    <div class="form-box register">
-      <form action="#">
-        <h2>Register</h2>
-        <div class="input-box">
-          <span class="icon"></span>
-          <ion-icon name="mail-outline"></ion-icon>
-          <input type="text" name="text" required>
-          <label>Username</label>
-        </div>
-        <div class="input-box">
-          <span class="icon"></span>
-          <ion-icon name="person-outline"></ion-icon>
-          <input type="email" name="email" required>
-          <label>Email</label>
-        </div>
-        <div class="input-box">
-          <span class="icon"></span>
-          <ion-icon name="lock-closed-outline"></ion-icon>
-          <input type="password" name="password" required>
-          <label>Password</label>
-        </div>
-        <button type="submit" class="button">Register</button>
-        <div class="remember-forgot">
-          <!-- <label><input type="checkbox">Pact with the Devil</label> -->
-        </div>
-        <div class="login-register">
-          <p><a href="#" class="login-link">Use Existing Account</a></p>
-          <p><a href="#" class="login-link">Already Signed Up? Login.</a></p>
-        </div>
-      </form>
-    </div>
-  </div>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

@@ -1,0 +1,12 @@
+body {
+  background: black;
+  color: white;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

@@ -38,7 +38,8 @@ p {
   padding: 40px;
 }
 
-.remember-forgot {}
+.remember-forgot {
+}
 
 .login-register {
   color: white;
@@ -48,27 +49,27 @@ p {
   color: white;
 }
 
-.register-link {}
+.register-link {
+}
 
 .wrapper .form-box.login {
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .wrapper.active .form-box.login {
   transform: translateX(-410px);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .wrapper .form-box.register {
   position: absolute;
   transform: translateX(410px);
-  transition: .5s;
-
+  transition: 0.5s;
 }
 
 .wrapper.active .form-box.register {
   transform: translate(0px);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .input-box {
@@ -82,7 +83,9 @@ p {
 
 .input-box input {
   background: black;
+  font-size: 1.2em;
   border: solid;
+  color: white;
   border-color: rgb(0, 217, 133);
   border-width: 1px;
 }

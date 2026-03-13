@@ -1,14 +1,51 @@
 .header {
   background-color: rgb(2 0 11);
-  height: 50px;
+  height: 10vh;
+  max-height: 80px;
+  min-height: 50px;
   width: 100vw;
+  font-size: 1.2em;
   display: flex;
   flex-direction: row;
   top: 0;
   position: fixed;
   justify-content: space-between;
   z-index: 1000;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
+  padding-top: 5px;
+}
+.header .middle-section a {
+  color: grey;
+  text-decoration: none;
+  border: solid 1px grey;
+  border-radius: 5px;
+  padding: 10px 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.header .right-section a {
+  color: lightblue;
+  text-decoration: none;
+  border: solid 1px lightblue;
+  border-radius: 5px;
+  padding: 10px 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.header .right-section a:hover {
+  background: lightblue;
+  color: black;
+}
+
+.header .middle-section a:hover {
+  background: grey;
+  color: white;
 }
 
 .left-section {

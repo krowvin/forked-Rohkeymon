@@ -1,43 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeaderTesting</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/templates/header.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HeaderTesting</title>
-  <link rel="stylesheet" href="/general.css">
-  <link rel="stylesheet" href="/templates/header.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <header id="header" class="header">
-    <div class="left-section">
-      <div class="logo-container">
-        <a href="/set-lists/index.html"><img class="rohkeymon-logo" src="/templates/rohkeymon-logo.png"></a>
+  <body>
+    <header id="header" class="header">
+      <div class="left-section">
+        <div class="logo-container">
+          <a href="/"
+            ><img class="rohkeymon-logo" src="/templates/rohkeymon-logo.png"
+          /></a>
+        </div>
+        <div class="haunter-container">
+          <img class="site-logo" src="/templates/Haunter.png" />
+        </div>
       </div>
-      <div class="haunter-container">
-        <img class="site-logo" src="/templates/Haunter.png">
+      <div class="middle-section">
+        <div class="sets-link">
+          <a href="/set-lists" title="View Sets" aria-label="View Sets">Sets</a>
+        </div>
+        <div class="decks-link">
+          <a href="/coming-soon" title="View Decks" aria-label="View Decks"
+            >Decks</a
+          >
+        </div>
       </div>
-    </div>
-    <div class="middle-section">
-      <div class="sets-link">
-        <a href="/set-lists/index.html">Sets</a>
+      <div class="right-section">
+        <div class="sign-in-link">
+          <a href="/login" title="Sign in" aria-label="Sign in">Sign in</a>
+        </div>
       </div>
-      <div class="decks-link">
-        <a href="">Decks</a>
-      </div>
-    </div>
-    <div class="right-section">
-      <div class="sign-in-link">
-        <a href="">Sign in</a>
-      </div>
-    </div>
-  </header>
-</body>
-
+    </header>
+  </body>
 </html>
