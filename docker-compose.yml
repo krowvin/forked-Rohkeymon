@@ -34,6 +34,7 @@ services:
       RDB_PW: rohkeymonpw
       Spring_Sec_Username: admin
       Spring_Sec_PW: adminpw
+      APP_CORS_ALLOWED_ORIGINS: ${APP_CORS_ALLOWED_ORIGINS:-https://rohkeymon.krowvin.com}
     ports:
       - "8080:8080"
 
@@ -46,6 +47,7 @@ services:
       - rohkeymon-api
     environment:
       API_UPSTREAM: http://rohkeymon-api:8080
+      APP_DOMAIN: ${APP_DOMAIN:-rohkeymon.krowvin.com}
     ports:
       - "3000:8080"
 
