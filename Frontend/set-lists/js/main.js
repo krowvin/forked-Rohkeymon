@@ -39,7 +39,7 @@ window.addEventListener('load', async function () {
 });
 
 export async function loadDecklist(decklistId) {
-  const response = await fetch(`http://localhost:8080/api/decklist/${decklistId}/cards-map`);
+  const response = await fetch(`/api/decklist/${decklistId}/cards-map`);
   const cardsMap = await response.json();
 
   // Populate the global decklist object
@@ -66,7 +66,7 @@ export async function addingToDeck(cardId) {
   console.log("decklist[decklistId]:", decklist[decklistId]);
   console.log("cardId:", cardId);
 
-  const response = await fetch("http://localhost:8080/api/add-to-deck", {
+  const response = await fetch("/api/add-to-deck", {
     method: "POST",
     headers: { "Content-Type": "application/json", },
     body: JSON.stringify({
