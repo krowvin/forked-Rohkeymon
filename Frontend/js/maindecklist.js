@@ -1,7 +1,7 @@
 window.addEventListener('load', function () {
 
   const setList = document.getElementById("pokemonlist")
-  fetch("http://127.0.0.1:8080/Rohkeymon/alldata").then(r => r.json()).then(d => {
+  fetch("/api/alldata").then(r => r.json()).then(d => {
     d.forEach(
       p => {
         const card = document.createElement("div")

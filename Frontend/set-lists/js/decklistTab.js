@@ -97,7 +97,7 @@ export function buildDecklistTab(cards) {
 
 export async function getDecklist(decklistId) {
   try {
-    const response = await fetch(`http://localhost:8080/api/decklist/${decklistId}/cards-map`);
+    const response = await fetch(`/api/decklist/${decklistId}/cards-map`);
     if (response.ok) {
       const cardsMap = await response.json();
       //console.log(data);
@@ -181,7 +181,7 @@ export async function removingFromDeck(cardId) {
     return;
   }
   console.log(decklist[decklistId][cardId].count + " (After)");
-  const response = await fetch("http://localhost:8080/api/decrement-copies", {
+  const response = await fetch("/api/decrement-copies", {
     method: "PATCH",
     headers: { "Content-Type": "application/json", },
     body: JSON.stringify({
@@ -204,7 +204,7 @@ export async function deletingFromDeck(cardId) {
     return;
   }
   console.log(cardId);
-  const response = await fetch("http://localhost:8080/api/delete-entry", {
+  const response = await fetch("/api/delete-entry", {
     method: "DELETE",
     headers: { "Content-Type": "application/json", },
     body: JSON.stringify({
