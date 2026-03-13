@@ -4,6 +4,8 @@ server {
     listen 8080;
     listen [::]:8080;
     server_name ${APP_DOMAIN};
+    absolute_redirect off;
+    port_in_redirect off;
 
     root /usr/share/nginx/html;
     index index.html;
