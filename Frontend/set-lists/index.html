@@ -1,62 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Grid Testing</title>
+    <link rel="stylesheet" href="/general.css" />
+    <link rel="stylesheet" href="/set-lists/css/set-list.css" />
+    <link rel="stylesheet" href="/set-lists/css/decklistTab.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/templates/header.js"></script>
+    <script type="module" src="/set-lists/js/main.js"></script>
+    <script type="module" src="/set-lists/js/decklistTab.js"></script>
+    <!-- <script src="/set-lists/js/mockDecklist.js"></script> -->
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Set Grid Testing</title>
-  <link rel="stylesheet" href="/general.css">
-  <link rel="stylesheet" href="/set-lists/css/set-list.css">
-  <link rel="stylesheet" href="/set-lists/css/decklistTab.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-    rel="stylesheet">
-  <script src="/templates/header.js"></script>
-  <!--<script type="module" src="/set-lists/js/main.js"></script>-->
-  <!--<script type="module" src="/set-lists/js/decklistTab.js"></script>-->
-  <script src="/set-lists/js/mockDecklist.js"></script>
-
-</head>
-
-<body class="main-content">
-  <header id="header" class="header">
-  </header>
-  <div class="set-header">Base Set 1</div>
-  <div class="" id="decklistContainer">
-    <div class="decklistButtonContainer">
-      <button class="decklistButton">
-        <img src="/templates/deckicon.png">
-      </button>
-    </div>
-    <div class="decklistTab">
-      <div class="decklistTabHeader">
-        <h1>Decklist</h1>
-        <div class="button">
-          <button class="close">x</button>
-        </div>
-        <div class="decklist-dropdown" data-dropdown>
-          <button class="decklist-dropdown-button" data-dropdown-button>Choose Deck</button>
-          <div class="decklist-dropdown-menu">
-            Decklist names <br>
-            Decklist names <br>
-            Decklist names <br>
-            Decklist names <br>
-            Decklist names <br>
-            <form>
-              <input type="text" class="new-deck-input" data-new-deck-input placeholder="Deck Name">
-            </form>
-          </div>
-
-        </div>
+  <body class="main-content">
+    <header id="header" class="header"></header>
+    <div class="set-header">Base Set 1</div>
+    <div class="" id="decklistContainer">
+      <div class="decklistButtonContainer">
+        <button class="decklistButton">
+          <img src="/templates/deckicon.png" />
+        </button>
       </div>
-      <div class="decklist"></div>
-      <h1>Export Decklist</h1>
+      <div class="decklistTab">
+        <div class="decklistTabHeader">
+          <h1>Decklist</h1>
+          <div class="button">
+            <button class="close">x</button>
+          </div>
+          <div class="decklist-dropdown" data-dropdown>
+            <button class="decklist-dropdown-button" data-dropdown-button>
+              Choose Deck
+            </button>
+            <div class="decklist-dropdown-menu">
+              Decklist names <br />
+              Decklist names <br />
+              Decklist names <br />
+              Decklist names <br />
+              Decklist names <br />
+              <form>
+                <input
+                  type="text"
+                  class="new-deck-input"
+                  data-new-deck-input
+                  placeholder="Deck Name"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="decklist"></div>
+        <h1>Export Decklist</h1>
+      </div>
     </div>
-  </div>
-  <div class="grid-flex-container">
-    <div id="cardgrid" class="card-grid">
+    <div class="grid-flex-container">
+      <div id="cardgrid" class="card-grid"></div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
