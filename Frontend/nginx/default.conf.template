@@ -45,7 +45,7 @@ server {
             deny all;
         }
 
-        try_files $uri $uri.html $uri/ =404;
-
+        rewrite ^(/.*[^/])$ $1/ last;
+        try_files $uri $uri/ =404;
     }
 }
