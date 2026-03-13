@@ -1,0 +1,53 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: rohkeymon-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: rohkeymon
+      MYSQL_USER: rohkeymon
+      MYSQL_PASSWORD: rohkeymonpw
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./Database/docker/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-urohkeymon", "-prohkeymonpw"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  rohkeymon-api:
+    build:
+      context: ./API/SpringBootAPI
+    container_name: rohkeymon-api
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      RDB_URL: jdbc:mysql://mysql:3306/rohkeymon?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      RDB_Username: rohkeymon
+      RDB_PW: rohkeymonpw
+      Spring_Sec_Username: admin
+      Spring_Sec_PW: adminpw
+    ports:
+      - "8080:8080"
+
+  rohkeymon-frontend:
+    build:
+      context: ./Frontend
+    container_name: rohkeymon-frontend
+    restart: unless-stopped
+    depends_on:
+      - rohkeymon-api
+    environment:
+      API_UPSTREAM: http://rohkeymon-api:8080
+    ports:
+      - "3000:8080"
+
+volumes:
+  mysql-data:
