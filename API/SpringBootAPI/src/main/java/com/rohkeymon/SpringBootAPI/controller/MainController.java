@@ -15,8 +15,6 @@ import com.rohkeymon.SpringBootAPI.repo.DecklistsRepo;
 @RequestMapping(
         path = {"api"}
 )
-@CrossOrigin(origins = "http://127.0.0.1:5500")
-
 public class MainController {
     @Autowired
     JdbcTemplate jdbcTemplate;
@@ -73,4 +71,3 @@ public class MainController {
         return decklistsRepo.deleteEntry(decklists);
     }
 }
-

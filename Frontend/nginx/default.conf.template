@@ -3,7 +3,7 @@ server_tokens off;
 server {
     listen 8080;
     listen [::]:8080;
-    server_name rohkeymon.krowvin.com;
+    server_name ${APP_DOMAIN};
 
     root /usr/share/nginx/html;
     index index.html;
