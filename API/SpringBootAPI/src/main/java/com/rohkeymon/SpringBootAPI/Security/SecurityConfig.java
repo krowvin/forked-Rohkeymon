@@ -15,8 +15,6 @@ public class SecurityConfig {
     @Bean // Custom filter chain bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-        http.cors(cors -> {
-        });
         http.csrf(customizer -> customizer.disable());
         // Configure which request need to be authenticated. Specify /register and
         // /login and require auth for all other resources. Define request matchers for
@@ -25,14 +23,14 @@ public class SecurityConfig {
         http.authorizeHttpRequests(request -> request
                 .requestMatchers(
                         "/api/register",
-                        "/api/login"// ,
-                // "/api/test",
-                // "/api/alldata",
-                // "/api/decklist",
-                // "/api/decklist/**",
-                // "/api/add-to-deck",
-                // "/api/decrement-copies",
-                // "/api/delete-entry"
+                        "/api/login",
+                        "/api/test",
+                        "/api/alldata",
+                        "/api/decklist",
+                        "/api/decklist/**",
+                        "/api/add-to-deck",
+                        "/api/decrement-copies",
+                        "/api/delete-entry"
                 ).permitAll()
                 .anyRequest().authenticated());
         return http.build();
